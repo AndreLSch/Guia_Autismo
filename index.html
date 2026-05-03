@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#2C2C2A">
+<title>15 Dicas para Intervenção Motora no Autismo — Andre Schliemann</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --teal: #1D9E75; --teal-light: #E1F5EE; --teal-dark: #085041;
+  --blue: #378ADD; --blue-light: #E6F1FB; --blue-dark: #0C447C;
+  --purple: #7F77DD; --purple-light: #EEEDFE; --purple-dark: #3C3489;
+  --coral: #D85A30; --coral-light: #FAECE7; --coral-dark: #712B13;
+  --amber: #BA7517; --amber-light: #FAEEDA; --amber-dark: #633806;
+  --gray-50: #F4F2EC; --gray-100: #E8E6DF; --gray-200: #B4B2A9;
+  --gray-800: #444441; --gray-900: #2C2C2A; --white: #ffffff;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --px: 20px;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--gray-900); background: var(--white); line-height: 1.6; font-size: 15px; -webkit-font-smoothing: antialiased; }
+
+/* STICKY BAR */
+.insta-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--teal); color: var(--white);
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 20px; font-size: 14px; font-weight: 600;
+  z-index: 999; text-decoration: none; letter-spacing: 0.3px;
+}
+.insta-bar svg { width: 18px; height: 18px; fill: white; flex-shrink: 0; }
+
+/* COVER */
+.cover {
+  background: var(--gray-900); color: var(--white);
+  min-height: 100svh; display: flex; flex-direction: column;
+  justify-content: space-between; padding: 40px var(--px) 80px;
+  position: relative; overflow: hidden;
+}
+.cover::before { content: ''; position: absolute; top: -60px; right: -60px; width: 260px; height: 260px; border-radius: 50%; background: var(--teal); opacity: 0.13; }
+.cover::after { content: ''; position: absolute; bottom: -40px; left: -40px; width: 200px; height: 200px; border-radius: 50%; background: var(--blue); opacity: 0.10; }
+.cover-badge { display: inline-block; background: var(--teal); color: var(--white); font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 7px 14px; border-radius: 4px; }
+.cover-content { position: relative; z-index: 1; margin-top: 32px; }
+.cover-number { font-family: var(--font-display); font-size: 96px; font-weight: 900; color: var(--teal); line-height: 1; opacity: 0.22; margin-bottom: -28px; }
+.cover-title { font-family: var(--font-display); font-size: 36px; font-weight: 700; line-height: 1.15; color: var(--white); margin-bottom: 20px; }
+.cover-title span { color: var(--teal); }
+.cover-divider { width: 48px; height: 3px; background: var(--teal); margin: 20px 0; border-radius: 2px; }
+.cover-subtitle { font-size: 15px; color: var(--gray-200); font-weight: 300; line-height: 1.75; }
+.cover-footer { position: relative; z-index: 1; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
+.cover-author { font-size: 13px; color: var(--gray-200); }
+.cover-author strong { display: block; font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+.cover-handle { display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 600; color: var(--teal); }
+
+/* INTRO */
+.intro-page { padding: 48px var(--px) 40px; border-bottom: 1px solid var(--gray-100); }
+.intro-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
+.intro-heading { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--gray-900); margin-bottom: 20px; line-height: 1.2; }
+.intro-text { font-size: 15px; line-height: 1.8; color: #555; margin-bottom: 16px; }
+.intro-text strong { color: var(--gray-900); font-weight: 600; }
+.summary { margin-top: 32px; display: flex; flex-direction: column; gap: 10px; }
+.summary-item { padding: 14px 16px; border-radius: 8px; border-left: 4px solid; background: var(--gray-50); display: flex; align-items: center; gap: 14px; }
+.summary-item .num { font-family: var(--font-display); font-size: 20px; font-weight: 700; min-width: 36px; }
+.summary-item .label { font-size: 13px; font-weight: 500; color: var(--gray-800); }
+.s-teal { border-color: var(--teal); } .s-teal .num { color: var(--teal-dark); }
+.s-blue { border-color: var(--blue); } .s-blue .num { color: var(--blue-dark); }
+.s-purple { border-color: var(--purple); } .s-purple .num { color: var(--purple-dark); }
+.s-coral { border-color: var(--coral); } .s-coral .num { color: var(--coral-dark); }
+.s-amber { border-color: var(--amber); } .s-amber .num { color: var(--amber-dark); }
+
+/* SECTION */
+.section-sep { height: 6px; margin: 0 var(--px); border-radius: 3px; opacity: 0.15; }
+.sep-teal { background: var(--teal); } .sep-blue { background: var(--blue); }
+.sep-purple { background: var(--purple); } .sep-coral { background: var(--coral); }
+.sep-amber { background: var(--amber); }
+.section-header { padding: 48px var(--px) 28px; }
+.section-tag { display: inline-flex; align-items: center; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 6px 12px; border-radius: 4px; margin-bottom: 14px; }
+.tag-teal { background: var(--teal-light); color: var(--teal-dark); }
+.tag-blue { background: var(--blue-light); color: var(--blue-dark); }
+.tag-purple { background: var(--purple-light); color: var(--purple-dark); }
+.tag-coral { background: var(--coral-light); color: var(--coral-dark); }
+.tag-amber { background: var(--amber-light); color: var(--amber-dark); }
+.section-title { font-family: var(--font-display); font-size: 30px; font-weight: 700; line-height: 1.2; color: var(--gray-900); }
+.section-line { width: 44px; height: 4px; border-radius: 2px; margin-top: 16px; }
+.line-teal { background: var(--teal); } .line-blue { background: var(--blue); }
+.line-purple { background: var(--purple); } .line-coral { background: var(--coral); }
+.line-amber { background: var(--amber); }
+
+/* TIP CARDS */
+.tip-container { padding: 0 var(--px) 32px; display: flex; flex-direction: column; gap: 20px; }
+.tip-card { border: 1px solid var(--gray-100); border-radius: 14px; overflow: hidden; background: var(--white); }
+.tip-header { display: flex; align-items: center; gap: 14px; padding: 20px 20px 16px; border-bottom: 1px solid var(--gray-100); }
+.tip-number { font-family: var(--font-display); font-size: 36px; font-weight: 900; line-height: 1; flex-shrink: 0; opacity: 0.18; min-width: 44px; }
+.tip-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; line-height: 1.25; }
+.tip-body { padding: 20px; display: flex; flex-direction: column; gap: 18px; }
+.tip-context { font-size: 13px; line-height: 1.75; color: #777; font-style: italic; padding: 12px 14px; background: var(--gray-50); border-radius: 6px; border-left: 3px solid var(--gray-200); }
+.tip-block { display: flex; flex-direction: column; gap: 8px; }
+.tip-block-label { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+.tip-block-label::after { content: ''; flex: 1; height: 1px; background: var(--gray-100); }
+.tip-block-content { font-size: 14px; line-height: 1.8; color: #444; }
+.tip-block-content strong { color: var(--gray-900); font-weight: 600; }
+.tip-block-content em { color: #666; }
+.tip-signal { padding: 14px 16px; border-radius: 8px; font-size: 13px; line-height: 1.7; display: flex; gap: 10px; align-items: flex-start; }
+.signal-icon { font-size: 15px; flex-shrink: 0; margin-top: 2px; }
+
+.t-teal .tip-number { color: var(--teal); } .t-teal .tip-title { color: var(--teal-dark); } .t-teal .tip-block-label { color: var(--teal); } .t-teal .tip-signal { background: var(--teal-light); color: var(--teal-dark); }
+.t-blue .tip-number { color: var(--blue); } .t-blue .tip-title { color: var(--blue-dark); } .t-blue .tip-block-label { color: var(--blue); } .t-blue .tip-signal { background: var(--blue-light); color: var(--blue-dark); }
+.t-purple .tip-number { color: var(--purple); } .t-purple .tip-title { color: var(--purple-dark); } .t-purple .tip-block-label { color: var(--purple); } .t-purple .tip-signal { background: var(--purple-light); color: var(--purple-dark); }
+.t-coral .tip-number { color: var(--coral); } .t-coral .tip-title { color: var(--coral-dark); } .t-coral .tip-block-label { color: var(--coral); } .t-coral .tip-signal { background: var(--coral-light); color: var(--coral-dark); }
+.t-amber .tip-number { color: var(--amber); } .t-amber .tip-title { color: var(--amber-dark); } .t-amber .tip-block-label { color: var(--amber); } .t-amber .tip-signal { background: var(--amber-light); color: var(--amber-dark); }
+
+/* CLOSING */
+.closing { background: var(--gray-900); color: var(--white); padding: 60px var(--px) 100px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px; position: relative; overflow: hidden; }
+.closing::before { content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 320px; height: 320px; border-radius: 50%; background: var(--teal); opacity: 0.08; }
+.closing-tag { font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal); position: relative; }
+.closing-title { font-family: var(--font-display); font-size: 32px; font-weight: 700; line-height: 1.2; color: var(--white); position: relative; }
+.closing-title span { color: var(--teal); }
+.closing-text { font-size: 15px; color: var(--gray-200); line-height: 1.75; font-weight: 300; position: relative; max-width: 320px; }
+.instagram-box { background: rgba(29,158,117,0.15); border: 1px solid rgba(29,158,117,0.4); border-radius: 14px; padding: 24px 32px; position: relative; width: 100%; max-width: 320px; }
+.instagram-handle { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--white); }
+.instagram-cta { font-size: 13px; color: var(--gray-200); margin-top: 6px; line-height: 1.5; }
+.closing-footer { font-size: 11px; color: var(--gray-200); opacity: 0.5; position: relative; }
+
+/* DESKTOP */
+@media (min-width: 640px) {
+  :root { --px: 48px; }
+  .cover-number { font-size: 120px; }
+  .cover-title { font-size: 48px; }
+  .cover-subtitle { font-size: 17px; max-width: 480px; }
+  .cover-footer { display: flex; justify-content: space-between; align-items: flex-end; }
+  .cover-handle { margin-top: 0; }
+  .intro-heading { font-size: 34px; }
+  .summary { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .section-title { font-size: 36px; }
+  .tip-header { padding: 24px 28px 20px; }
+  .tip-number { font-size: 42px; }
+  .tip-title { font-size: 21px; }
+  .tip-body { padding: 24px 28px; }
+  .tip-context { font-size: 14px; }
+  .tip-block-content { font-size: 15px; }
+  .tip-signal { font-size: 14px; }
+  .closing-title { font-size: 40px; }
+}
+@media (min-width: 900px) {
+  body { max-width: 860px; margin: 0 auto; }
+  :root { --px: 64px; }
+  .cover-number { font-size: 140px; margin-bottom: -40px; }
+  .cover-title { font-size: 52px; }
+}
+</style>
+</head>
+<body>
+
+<a class="insta-bar" href="https://instagram.com/andreschliemann" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+  Seguir @andreschliemann
+</a>
+
+<!-- COVER -->
+<div class="cover">
+  <div><div class="cover-badge">Guia Prático · Educação Física Adaptada</div></div>
+  <div class="cover-content">
+    <div class="cover-number">15</div>
+    <h1 class="cover-title">Dicas para <span>Intervenção</span> Motora no Autismo</h1>
+    <div class="cover-divider"></div>
+    <p class="cover-subtitle">Um guia prático para professores de educação física e treinadores que trabalham com crianças e adolescentes autistas na escola e no esporte.</p>
+  </div>
+  <div class="cover-footer">
+    <div class="cover-author">
+      <strong>Andre Schliemann</strong>
+      Intervenção Motora · Educação Física Adaptada · Autismo
+      <span class="cover-handle">@andreschliemann</span>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<div class="intro-page">
+  <p class="intro-label">Sobre este guia</p>
+  <h2 class="intro-heading">Para quem é este material?</h2>
+  <p class="intro-text">Este guia foi criado para <strong>professores de educação física e treinadores</strong> que já têm contato com alunos e atletas autistas, mas que buscam estratégias mais intencionais, práticas e embasadas para qualificar suas intervenções motoras.</p>
+  <p class="intro-text">As 15 dicas foram organizadas em 5 blocos temáticos e estruturadas em um formato direto: contexto, o que fazer, como fazer na prática e o sinal de que está funcionando. Sem jargão excessivo, sem teoria desconectada do chão de quadra.</p>
+  <p class="intro-text">Os exemplos priorizam dois contextos: a <strong>escola regular</strong> com turmas inclusivas e o <strong>esporte e treinamento</strong> com crianças e adolescentes.</p>
+  <div class="summary">
+    <div class="summary-item s-teal"><div class="num">1–3</div><div class="label">Dicas Gerais</div></div>
+    <div class="summary-item s-blue"><div class="num">4–6</div><div class="label">Aprendizagem Motora</div></div>
+    <div class="summary-item s-purple"><div class="num">7–9</div><div class="label">Psicologia</div></div>
+    <div class="summary-item s-coral"><div class="num">10–12</div><div class="label">Comunicação e Linguagem</div></div>
+    <div class="summary-item s-amber"><div class="num">13–15</div><div class="label">Regulação da Ansiedade</div></div>
+  </div>
+</div>
+
+<!-- BLOCO 1 -->
+<div class="section-header">
+  <div class="section-tag tag-teal">Bloco 01</div>
+  <h2 class="section-title">Dicas Gerais</h2>
+  <div class="section-line line-teal"></div>
+</div>
+<div class="tip-container">
+  <div class="tip-card t-teal">
+    <div class="tip-header"><div class="tip-number">01</div><div class="tip-title">Individualize antes de intervir</div></div>
+    <div class="tip-body">
+      <div class="tip-context">O autismo é altamente heterogêneo — não existe um perfil único. Cada aluno tem suas próprias demandas sensoriais, motoras e comportamentais, e intervenções genéricas costumam falhar porque ignoram essa variabilidade.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Antes de incluir o aluno em qualquer atividade, observe e registre seu perfil individual: o que ele tolera, o que o desregula e quais movimentos já domina.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content">Na primeira semana, reserve <strong>5 minutos antes ou após a aula</strong> para observar o aluno em situação livre. Anote três coisas: um movimento que ele faz espontaneamente, um estímulo que parece incomodá-lo e uma situação que gera engajamento natural.<br><br>Na escola, converse com o professor de sala e com a família. No esporte, aplique uma ficha simples de observação nas duas primeiras sessões antes de definir as metas motoras.</div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno começa a participar das atividades sem resistência inicial, porque as propostas partem de algo que já faz sentido para ele.</div></div>
+    </div>
+  </div>
+  <div class="tip-card t-teal">
+    <div class="tip-header"><div class="tip-number">02</div><div class="tip-title">Crie rotinas com previsibilidade</div></div>
+    <div class="tip-body">
+      <div class="tip-context">Situações imprevisíveis elevam o estado de alerta do sistema nervoso de pessoas autistas, aumentando o risco de desregulação antes mesmo da atividade começar. Rotinas estruturadas reduzem essa carga e liberam energia para o aprendizado motor.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Estruture sempre a aula ou o treino na <strong>mesma sequência de momentos</strong>: chegada, aquecimento, atividade principal, volta à calma e encerramento.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content">Crie um <strong>cartão visual plastificado</strong> com 4 a 5 figuras representando cada momento da aula. Na escola, cole na parede da quadra. No treino, leve no bolso e mostre ao início de cada sessão.<br><br>Antes de qualquer mudança na rotina, avise o aluno com antecedência: <em>"Hoje o aquecimento vai ser diferente."</em> Essa frase simples pode evitar uma crise inteira.</div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno chega na aula e já se posiciona corretamente para o primeiro momento, sem precisar ser direcionado verbalmente.</div></div>
+    </div>
+  </div>
+  <div class="tip-card t-teal">
+    <div class="tip-header"><div class="tip-number">03</div><div class="tip-title">Simplifique as instruções em camadas</div></div>
+    <div class="tip-body">
+      <div class="tip-context">Instruções longas e multietapas sobrecarregam a memória de trabalho de alunos autistas, reduzindo significativamente a execução motora. O modelo de instrução em camadas — do mais simples ao mais complexo — respeita esse limite e favorece a compreensão progressiva.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Dê <strong>uma instrução por vez</strong>, espere a execução e só então avance para a próxima etapa. Nunca empilhe dois ou mais comandos na mesma frase.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content">Substitua <em>"Pega a bola, corre até o cone e arremessa no cesto"</em> por três momentos distintos:<br><br><strong>"Pega a bola."</strong> → espera → <strong>"Corre até o cone."</strong> → espera → <strong>"Arremessa."</strong><br><br>Use gestos simultâneos à fala para reforçar cada comando. No esporte, marque cada etapa com um sinal sonoro ou visual.</div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno executa a tarefa com menos repetições de instrução e com maior precisão motora ao longo das sessões.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCO 2 -->
+<div class="section-sep sep-blue"></div>
+<div class="section-header">
+  <div class="section-tag tag-blue">Bloco 02</div>
+  <h2 class="section-title">Aprendizagem Motora</h2>
+  <div class="section-line line-blue"></div>
+</div>
+<div class="tip-container">
+  <div class="tip-card t-blue">
+    <div class="tip-header"><div class="tip-number">04</div><div class="tip-title">Treine o equilíbrio antes de exigir habilidade</div></div>
+    <div class="tip-body">
+      <div class="tip-context">Crianças e adolescentes autistas frequentemente apresentam déficits no controle postural e no processamento vestibular e proprioceptivo. Sem essa base, o aluno falha na tarefa e perde o engajamento antes mesmo de aprender a habilidade.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Inclua <strong>sempre</strong> exercícios de controle postural e equilíbrio nos primeiros minutos do aquecimento, antes de qualquer habilidade motora específica da aula ou do treino.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content">Reserve <strong>5 a 8 minutos</strong> do aquecimento para atividades como caminhar sobre linhas no chão, equilibrar-se em um pé com apoio progressivamente reduzido e jogos de estátua com variação de base de suporte.<br><br>Na escola, transforme em desafio coletivo para não isolar o aluno autista. No esporte, integre como parte oficial do protocolo de aquecimento da equipe.</div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno demonstra maior estabilidade durante as atividades principais e consegue manter a posição de base por períodos progressivamente maiores sem compensações posturais visíveis.</div></div>
+    </div>
+  </div>
+  <div class="tip-card t-blue">
+    <div class="tip-header"><div class="tip-number">05</div><div class="tip-title">Varie a prática sem perder a estrutura</div></div>
+    <div class="tip-body">
+      <div class="tip-context">Praticar uma habilidade em diferentes condições acelera a generalização do aprendizado. Para alunos autistas, essa variação precisa ser gradual e planejada — mudanças abruptas geram desregulação, mas a ausência de variação impede a transferência da habilidade para outros contextos.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Introduza variações <strong>pequenas e previsíveis</strong> dentro de uma mesma tarefa motora, mantendo sempre a estrutura central do movimento.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content"><strong>Semana 1 e 2:</strong> Pratique sempre no mesmo ambiente, com os mesmos materiais.<br><strong>Semana 3:</strong> Mude apenas um elemento — por exemplo, a cor da bola ou o tamanho do alvo.<br><strong>Semana 4:</strong> Mude o contexto mantendo a mesma habilidade — arremessar dentro da quadra e depois no pátio.<br><br>Avise o aluno antes de cada variação: <em>"Hoje vamos fazer igual, mas com uma bola diferente."</em></div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno executa a habilidade corretamente mesmo quando um elemento da tarefa é modificado, sem precisar reaprender do zero.</div></div>
+    </div>
+  </div>
+  <div class="tip-card t-blue">
+    <div class="tip-header"><div class="tip-number">06</div><div class="tip-title">Ensine pelo corpo, não pela palavra</div></div>
+    <div class="tip-body">
+      <div class="tip-context">A aprendizagem motora implícita — aquela que ocorre sem instrução verbal explícita — é frequentemente mais eficaz para pessoas autistas. O sistema de aprendizagem implícita permanece relativamente preservado, enquanto o sistema explícito, que depende de linguagem e atenção consciente, é frequentemente comprometido.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Substitua explicações verbais longas por <strong>demonstração física direta</strong>, guia manual e imitação. Use a palavra apenas para nomear o movimento, não para descrevê-lo.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content"><strong>1.</strong> Mostre o movimento em velocidade normal.<br><strong>2.</strong> Repita em câmera lenta, sinalizando a parte mais importante.<br><strong>3.</strong> Guie fisicamente o aluno pelo movimento com toque gentil, se ele permitir.<br><strong>4.</strong> Nomeie o movimento com uma palavra simples: <em>"chute", "salto", "giro".</em><br><br>No esporte, use vídeos curtos de 15 a 30 segundos no celular mostrando o gesto técnico antes da prática.</div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno reproduz o movimento com menos tentativas quando a instrução é visual e corporal, e começa a imitar espontaneamente os colegas durante as atividades.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCO 3 -->
+<div class="section-sep sep-purple"></div>
+<div class="section-header">
+  <div class="section-tag tag-purple">Bloco 03</div>
+  <h2 class="section-title">Psicologia</h2>
+  <div class="section-line line-purple"></div>
+</div>
+<div class="tip-container">
+  <div class="tip-card t-purple">
+    <div class="tip-header"><div class="tip-number">07</div><div class="tip-title">Construa atenção compartilhada antes de ensinar</div></div>
+    <div class="tip-body">
+      <div class="tip-context">A atenção compartilhada — capacidade de focar em um mesmo objeto ou ação junto com outra pessoa — é um dos marcadores centrais do autismo e base para qualquer aprendizagem social e motora. Intervenções que a desenvolvem antes da tarefa aumentam significativamente o engajamento e a retenção do aprendizado.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Antes de iniciar qualquer atividade, garanta que o aluno está <strong>genuinamente atento a você</strong> — não apenas fisicamente presente. Crie um momento de conexão real antes da instrução, sem forçar contato visual.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content">Adote um <strong>ritual de início personalizado</strong> de 30 a 60 segundos: chame o aluno pelo nome e aguarde uma resposta — verbal, gestual ou visual. Aponte para o material: <em>"Hoje vamos usar a bola aqui."</em> Aguarde um sinal de que processou — um olhar, um gesto ou uma aproximação espontânea.<br><br>Na escola, faça isso discretamente. No esporte, transforme em parte do protocolo de início para toda a equipe.</div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno começa a antecipar o início das atividades dirigindo o olhar ou o corpo para o espaço correto antes mesmo de você dar a instrução.</div></div>
+    </div>
+  </div>
+  <div class="tip-card t-purple">
+    <div class="tip-header"><div class="tip-number">08</div><div class="tip-title">Use a imitação como ferramenta de ensino</div></div>
+    <div class="tip-body">
+      <div class="tip-context">Pessoas autistas apresentam diferenças no sistema de imitação espontânea, mas respondem bem à imitação estruturada e intencional. Quando o professor também imita o aluno — imitação recíproca — a frequência de imitação espontânea aumenta e o vínculo se fortalece, criando um canal natural para o aprendizado motor.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Use a imitação em <strong>dois sentidos</strong>: você imita o aluno para criar vínculo e engajamento, e o aluno imita você para aprender o movimento. Transforme isso em uma troca, não em uma via de mão única.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content"><strong>Passo 1:</strong> Observe o aluno fazendo qualquer movimento espontâneo.<br><strong>Passo 2:</strong> Reproduza exatamente o mesmo movimento e observe a reação.<br><strong>Passo 3:</strong> Modifique levemente e veja se ele te acompanha.<br><strong>Passo 4:</strong> Introduza gradualmente o movimento que quer ensinar dentro dessa troca.<br><br>Na escola, faça em duplas com alunos típicos — reduz o estigma e enriquece a atividade para toda a turma.</div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno começa a olhar para você e para os colegas durante as atividades, reproduzindo movimentos com mais frequência e iniciativa própria.</div></div>
+    </div>
+  </div>
+  <div class="tip-card t-purple">
+    <div class="tip-header"><div class="tip-number">09</div><div class="tip-title">Considere a perspectiva do aluno antes de corrigir</div></div>
+    <div class="tip-body">
+      <div class="tip-context">Muitos professores fazem correções baseadas apenas no erro observado, sem considerar a perspectiva do aluno. Correções inapropriadas aumentam a ansiedade e reduzem o engajamento. Partir do ponto de vista do aluno é significativamente mais eficaz do que corrigir com base apenas no padrão técnico esperado.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Antes de corrigir um movimento, pergunte-se: <strong>o que esse aluno está tentando fazer?</strong> A correção deve partir do que faz sentido para ele, não apenas do padrão técnico que você espera.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content">Substitua a correção direta pela <strong>correção em três tempos</strong>:<br><br><strong>Primeiro:</strong> Reconheça o esforço — <em>"Você fez! Boa tentativa."</em><br><strong>Segundo:</strong> Identifique o que estava correto antes de apontar o erro.<br><strong>Terceiro:</strong> Ofereça um ajuste simples — <em>"Agora tenta dobrar mais o joelho"</em> em vez de <em>"Está errado, faz de novo."</em><br><br>No esporte, evite correções em público nos primeiros meses de vínculo.</div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno passa a aceitar correções sem reação emocional intensa, e começa a tentar novamente após o ajuste sem precisar de insistência verbal.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCO 4 -->
+<div class="section-sep sep-coral"></div>
+<div class="section-header">
+  <div class="section-tag tag-coral">Bloco 04</div>
+  <h2 class="section-title">Comunicação e Linguagem</h2>
+  <div class="section-line line-coral"></div>
+</div>
+<div class="tip-container">
+  <div class="tip-card t-coral">
+    <div class="tip-header"><div class="tip-number">10</div><div class="tip-title">Ensine o aluno a pedir e indicar</div></div>
+    <div class="tip-body">
+      <div class="tip-context">O gesto de apontar e indicar é um marco do desenvolvimento comunicativo e está frequentemente ausente ou reduzido no autismo. Um aluno que consegue indicar o que quer ou o que não consegue fazer reduz significativamente episódios de frustração e crise.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Crie oportunidades <strong>intencionais e frequentes</strong> para que o aluno use gestos de indicação durante a aula ou treino, mesmo que ainda não use a linguagem verbal de forma funcional.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content">Disponibilize dois materiais e pergunte <em>"Qual você quer usar?"</em> — espere ele apontar antes de entregar. Ao final de cada atividade, mostre duas imagens — rosto feliz e rosto triste — e peça que ele aponte como se sentiu.<br><br>No esporte, crie um painel com imagens de exercícios e peça que o atleta aponte o que quer repetir no próximo treino.</div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno começa a apontar espontaneamente para materiais, espaços ou colegas durante as atividades, reduzindo comportamentos de fuga ou recusa como forma de comunicação.</div></div>
+    </div>
+  </div>
+  <div class="tip-card t-coral">
+    <div class="tip-header"><div class="tip-number">11</div><div class="tip-title">Estruture a aula com turnos claros</div></div>
+    <div class="tip-body">
+      <div class="tip-context">A alternância entre agir e esperar é frequentemente um desafio para pessoas autistas. Atividades com turnos bem definidos funcionam como treino naturalístico de habilidades comunicativas e sociais, reduzindo comportamentos disruptivos gerados pela dificuldade de esperar.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Estruture as atividades motoras com <strong>início, meio e fim claramente sinalizados</strong> para cada participante, tornando o turno de cada um visível e previsível para o aluno autista.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content">Use sinais concretos para marcar os turnos: um <strong>colete colorido ou pulseira</strong> identifica de quem é a vez — quando passa para o próximo, passa o objeto junto. Um <strong>sinal sonoro</strong> marca a troca de forma clara e igual para todos.<br><br>Verbalize sempre: <em>"Agora é a sua vez"</em> e <em>"Agora é a vez do João."</em> Na escola, jogos como circuitos em estações e revezamentos são ótimos para treinar turnos de forma inclusiva.</div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno aguarda seu turno com menos agitação e começa a observar os colegas durante a espera em vez de se desconectar da atividade.</div></div>
+    </div>
+  </div>
+  <div class="tip-card t-coral">
+    <div class="tip-header"><div class="tip-number">12</div><div class="tip-title">Use canções e ritmos como suporte motor</div></div>
+    <div class="tip-body">
+      <div class="tip-context">A música ativa circuitos cerebrais relacionados ao movimento, à antecipação e à regulação emocional. O processamento rítmico frequentemente permanece preservado no autismo, tornando canções e batidas rítmicas um canal privilegiado de aprendizagem motora.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Associe movimentos motores a <strong>padrões rítmicos consistentes</strong> — batidas, canções simples ou contagens ritmadas — criando uma âncora sonora que facilita a execução e a memorização do gesto.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content">Use <strong>contagens ritmadas em voz alta</strong> durante movimentos repetitivos: <em>"Um, dois, um, dois"</em> para corridas; <em>"Sobe, desce"</em> para agachamentos. Crie um jingle curto de no máximo quatro linhas associado ao aquecimento — repita sempre na mesma sequência.<br><br>No esporte, use batidas de palma para marcar o ritmo do gesto técnico antes de executá-lo com o implemento.</div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno começa a antecipar os movimentos ao ouvir o ritmo ou a canção associada, executando a sequência com maior fluidez e menos necessidade de instrução verbal.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCO 5 -->
+<div class="section-sep sep-amber"></div>
+<div class="section-header">
+  <div class="section-tag tag-amber">Bloco 05</div>
+  <h2 class="section-title">Regulação da Ansiedade</h2>
+  <div class="section-line line-amber"></div>
+</div>
+<div class="tip-container">
+  <div class="tip-card t-amber">
+    <div class="tip-header"><div class="tip-number">13</div><div class="tip-title">Reduza a sobrecarga sensorial do ambiente</div></div>
+    <div class="tip-body">
+      <div class="tip-context">A grande maioria das pessoas autistas apresenta algum grau de hiper ou hipossensibilidade sensorial. Em ambientes como quadras e pátios, o sistema nervoso do aluno pode entrar em sobrecarga antes mesmo da atividade começar — tornando a crise inevitável não por comportamento, mas por fisiologia.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Mapeie e reduza <strong>proativamente</strong> os estímulos sensoriais do ambiente antes da chegada do aluno, em vez de reagir à crise depois que ela acontece.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content"><strong>Sonoro:</strong> Evite música alta no início — introduza o som gradualmente após o aluno já estar engajado. Avise com antecedência quando houver apito ou som alto.<br><strong>Visual:</strong> Deixe visível apenas o material que será usado na aula.<br><strong>Tátil:</strong> Pergunte à família sobre sensibilidades ao toque — alguns não toleram coletes, bolas de determinadas texturas ou contato físico.<br><strong>Espacial:</strong> Defina com fita colorida ou cones o espaço do aluno — um território previsível reduz a ansiedade de navegação no espaço.</div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno chega ao espaço de prática e permanece na área sem comportamentos de fuga, esquiva ou agitação nos primeiros minutos — que costumam ser os mais críticos para a desregulação.</div></div>
+    </div>
+  </div>
+  <div class="tip-card t-amber">
+    <div class="tip-header"><div class="tip-number">14</div><div class="tip-title">Comunique o tempo de forma visual e concreta</div></div>
+    <div class="tip-body">
+      <div class="tip-context">A percepção do tempo é frequentemente alterada no autismo — o cérebro autista tem maior dificuldade em estimar quanto tempo falta para uma atividade terminar, o que gera ansiedade crescente. Suportes visuais de tempo tornam o tempo concreto e previsível em vez de abstrato e ameaçador.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Torne o tempo <strong>visível e concreto</strong> para o aluno durante todas as atividades, especialmente nas que geram maior resistência ou ansiedade.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content">Use um <strong>timer visual</strong> ou ampulheta com display grande posicionado no campo visual do aluno. Nos últimos 30 segundos, faça uma <strong>contagem regressiva verbal</strong>: <em>"Faltam 10 segundos, 9, 8..."</em><br><br>Crie um <strong>cartão de duração</strong> com círculos representando cada bloco de atividade — risque ou vire cada círculo ao concluir. No esporte, mostre o relógio do celular: <em>"Treino termina quando o ponteiro chegar aqui."</em></div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno começa a olhar espontaneamente para o timer durante as atividades e realiza as transições entre tarefas com menos resistência e sem necessidade de insistência verbal.</div></div>
+    </div>
+  </div>
+  <div class="tip-card t-amber">
+    <div class="tip-header"><div class="tip-number">15</div><div class="tip-title">Crie um plano de desescalada antes da crise</div></div>
+    <div class="tip-body">
+      <div class="tip-context">Crises de desregulação seguem um padrão previsível de três fases: escalada, pico e recuperação. A maioria dos professores intervém apenas no pico, quando a crise já está instalada e qualquer intervenção tem baixíssima eficácia. Identificar os sinais precoces e agir na primeira fase reduz significativamente a intensidade e a duração das crises.</div>
+      <div class="tip-block"><div class="tip-block-label">O que fazer</div><div class="tip-block-content">Construa um <strong>plano individual de desescalada</strong> para o aluno autista antes que a primeira crise aconteça — não depois. Esse plano deve ser conhecido por todos os profissionais que trabalham com ele.</div></div>
+      <div class="tip-block"><div class="tip-block-label">Como fazer na prática</div><div class="tip-block-content"><strong>Etapa 1 — Identifique os sinais de escalada:</strong> Cada aluno tem sinais próprios — agitação motora crescente, vocalização repetitiva, busca por isolamento, aumento de estereotipias ou recusa súbita. Converse com a família e observe nas primeiras semanas.<br><br><strong>Etapa 2 — Crie uma estratégia de pausa regulatória:</strong> Defina um espaço de calma dentro ou próximo ao ambiente de prática — pode ser um canto da quadra com um tapete e um objeto de preferência do aluno. Combine com ele previamente que esse espaço existe.<br><br><strong>Etapa 3 — Estabeleça um protocolo de retorno:</strong> Após a pausa, não exija retorno imediato. Use uma transição suave antes de reengajar. Nunca use o retorno à atividade como punição ou recompensa.</div></div>
+      <div class="tip-signal"><div class="signal-icon">✓</div><div>O aluno começa a reconhecer seus próprios sinais de desregulação e busca o espaço de pausa espontaneamente, antes de atingir o pico da crise — esse é um dos maiores indicadores de desenvolvimento de autorregulação.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CLOSING -->
+<div class="closing">
+  <p class="closing-tag">Obrigado por chegar até aqui</p>
+  <h2 class="closing-title">Gostou do conteúdo?<br><span>Vamos continuar juntos.</span></h2>
+  <p class="closing-text">Compartilhe este guia com colegas professores e treinadores. Quanto mais profissionais qualificados, melhor para cada aluno autista que chega à quadra.</p>
+  <div class="instagram-box">
+    <div class="instagram-handle">@andreschliemann</div>
+    <div class="instagram-cta">Siga para mais conteúdo sobre intervenção motora e autismo</div>
+  </div>
+  <p class="closing-footer">Andre Schliemann · Intervenção Motora e Autismo · 2025</p>
+</div>
+
+</body>
+</html>
